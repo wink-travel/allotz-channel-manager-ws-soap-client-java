@@ -6,10 +6,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.traveliko</groupId>
-    <artifactId>siteminder-cxf-client</artifactId>
+    <artifactId>allotz-cxf-client</artifactId>
     <packaging>jar</packaging>
-    <version>3.0.32-SNAPSHOT</version>
-    <name>Siteminder CXF Client (JAR)</name>
+    <version>1.0.1</version>
+    <name>Allotz CXF Client (JAR)</name>
     <inceptionYear>2013</inceptionYear>
     <organization>
         <name>TRAVELIKO SINGAPORE PTE.LTD.</name>
@@ -30,9 +30,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:https://bitbucket.org/travelikodevelopment/siteminder-cxf-client.git</connection>
-        <developerConnection>scm:git:https://bitbucket.org/travelikodevelopment/siteminder-cxf-client.git</developerConnection>
-        <url>https://bitbucket.org/travelikodevelopment/siteminder-cxf-client.git</url>
+        <connection>scm:git:https://bitbucket.org/travelikodevelopment/allotz-cxf-client.git</connection>
+        <developerConnection>scm:git:https://bitbucket.org/travelikodevelopment/allotz-cxf-client.git</developerConnection>
+        <url>https://bitbucket.org/travelikodevelopment/allotz-cxf-client.git</url>
         <tag>HEAD</tag>
     </scm>
 
@@ -71,12 +71,12 @@
 	                            <xjcArg>-XautoNameResolution</xjcArg>
 	                        </xjcArgs>
                             <genJWS>false</genJWS>
-							<packageName>com.traveliko.platform.ws.siteminder</packageName>
+							<packageName>com.traveliko.platform.ws.allotz</packageName>
                             <wsdlDirectory>${basedir}/src/main/resources/wsdl</wsdlDirectory>
                             <wsdlFiles>
-                                <wsdlFile>siteconnect.wsdl</wsdlFile>
+                                <wsdlFile>allotz.wsdl</wsdlFile>
                             </wsdlFiles>
-                            <wsdlLocation>classpath:wsdl/siteconnect.wsdl</wsdlLocation>
+                            <wsdlLocation>classpath:wsdl/allotz.wsdl</wsdlLocation>
 							<vmArgs>
 								<vmArg>-Djavax.xml.accessExternalDTD=all</vmArg>
 						        <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
