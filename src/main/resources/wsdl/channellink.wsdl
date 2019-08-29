@@ -15,18 +15,18 @@
     <wsdl:types>
 
         <xs:schema targetNamespace="http://www.opentravel.org/OTA/2003/05">
-            <xs:include schemaLocation="./ota/OTA_HotelResNotifRQ.xsd"/>
-            <xs:include schemaLocation="./ota/OTA_HotelResNotifRS.xsd"/>
-            <xs:include schemaLocation="./ota/OTA_PingRQ.xsd"/>
-            <xs:include schemaLocation="./ota/OTA_PingRS.xsd"/>
+            <xs:include schemaLocation="../schema/OTA_HotelResNotifRQ.xsd"/>
+            <xs:include schemaLocation="../schema/OTA_HotelResNotifRS.xsd"/>
+            <xs:include schemaLocation="../schema/OTA_PingRQ.xsd"/>
+            <xs:include schemaLocation="../schema/OTA_PingRS.xsd"/>
         </xs:schema>
 
         <xs:schema targetNamespace="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
-            <xs:include schemaLocation="./oasis-200401-wss-wssecurity-secext-1.0.xsd"/>
+            <xs:include schemaLocation="../schema/oasis-200401-wss-wssecurity-secext-1.0.xsd"/>
         </xs:schema>
 
         <xs:schema targetNamespace="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
-            <xs:include schemaLocation="./oasis-200401-wss-wssecurity-utility-1.0.xsd"/>
+            <xs:include schemaLocation="../schema/oasis-200401-wss-wssecurity-utility-1.0.xsd"/>
         </xs:schema>
 
     </wsdl:types>

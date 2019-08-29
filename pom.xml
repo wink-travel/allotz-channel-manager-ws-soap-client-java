@@ -74,9 +74,9 @@
 							<packageName>com.traveliko.platform.ws.allotz</packageName>
                             <wsdlDirectory>${basedir}/src/main/resources/wsdl</wsdlDirectory>
                             <wsdlFiles>
-                                <wsdlFile>allotz.wsdl</wsdlFile>
+                                <wsdlFile>channellink.wsdl</wsdlFile>
                             </wsdlFiles>
-							<wsdlLocation>classpath:wsdl/allotz.wsdl</wsdlLocation>
+							<wsdlLocation>classpath:wsdl/channellink.wsdl</wsdlLocation>
 							<vmArgs>
 								<vmArg>-Djavax.xml.accessExternalDTD=all</vmArg>
 						        <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
