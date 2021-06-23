@@ -119,6 +119,8 @@
                 <groupId>org.apache.cxf</groupId>
                 <artifactId>cxf-bom</artifactId>
                 <version>${apache.cxf.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
