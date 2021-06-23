@@ -8,7 +8,7 @@
     <groupId>com.traveliko</groupId>
     <artifactId>allotz-cxf-client</artifactId>
     <packaging>jar</packaging>
-    <version>3.4.5</version>
+    <version>3.4.6</version>
     <name>Allotz CXF Client (JAR)</name>
     <inceptionYear>2013</inceptionYear>
     <organization>
@@ -143,25 +143,23 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
                 <version>${maven.deploy.plugin.version}</version>
-                <dependencies>
-                    <!-- s3 client -->
-                    <dependency>
-                        <groupId>org.jets3t</groupId>
-                        <artifactId>jets3t</artifactId>
-                        <version>${jets3t.version}</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.jets3t</groupId>
-                        <artifactId>synchronize</artifactId>
-                        <version>${jets3t.version}</version>
-                    </dependency>
-                </dependencies>
             </plugin>
         </plugins>
 
     </build>
 
     <dependencies>
+        <!-- s3 client -->
+        <dependency>
+            <groupId>org.jets3t</groupId>
+            <artifactId>jets3t</artifactId>
+            <version>${jets3t.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jets3t</groupId>
+            <artifactId>synchronize</artifactId>
+            <version>${jets3t.version}</version>
+        </dependency>
 
         <!-- Apache CXF -->
         <dependency>
