@@ -68,20 +68,20 @@
                             <goal>wsimport</goal>
                         </goals>
                         <configuration>
-							<xjcArgs>
-	                            <xjcArg>-XautoNameResolution</xjcArg>
-	                        </xjcArgs>
+                            <xjcArgs>
+                                <xjcArg>-XautoNameResolution</xjcArg>
+                            </xjcArgs>
                             <genJWS>false</genJWS>
-							<packageName>com.traveliko.platform.ws.allotz</packageName>
+                            <packageName>com.traveliko.platform.ws.allotz</packageName>
                             <wsdlDirectory>${basedir}/src/main/resources/wsdl</wsdlDirectory>
                             <wsdlFiles>
                                 <wsdlFile>channellink.wsdl</wsdlFile>
                             </wsdlFiles>
-							<wsdlLocation>classpath:wsdl/channellink.wsdl</wsdlLocation>
-							<vmArgs>
-								<vmArg>-Djavax.xml.accessExternalDTD=all</vmArg>
-						        <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
-						    </vmArgs>
+                            <wsdlLocation>classpath:wsdl/channellink.wsdl</wsdlLocation>
+                            <vmArgs>
+                                <vmArg>-Djavax.xml.accessExternalDTD=all</vmArg>
+                                <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
+                            </vmArgs>
                         </configuration>
                     </execution>
                 </executions>
@@ -205,4 +205,17 @@
         </repository>
 
     </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>traveliko-releases</id>
+            <name>AWS Release Repository</name>
+            <url>s3://travelikomavenrepo-sg/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>traveliko-snapshots</id>
+            <name>AWS Snapshot Repository</name>
+            <url>s3://travelikomavenrepo-sg/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
