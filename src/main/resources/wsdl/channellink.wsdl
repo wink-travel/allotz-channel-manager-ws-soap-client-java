@@ -8,27 +8,17 @@
         xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
         xmlns:xs="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xmlns:tns="http://channellink.example.com/soap/v1"
-        xmlns:ws="http://channellink.example.com/soap/v1"
-        targetNamespace="http://channellink.example.com/soap/v1">
+        xmlns:tns="http://channellink.allotz.com/soap/v1"
+        xmlns:ws="http://channellink.allotz.com/soap/v1"
+        targetNamespace="http://channellink.allotz.com/soap/v1">
 
     <wsdl:types>
 
         <xs:schema targetNamespace="http://www.opentravel.org/OTA/2003/05">
-            <xs:include schemaLocation="../schema/OTA_HotelAvailRQ.xsd"/>
-            <xs:include schemaLocation="../schema/OTA_HotelAvailRS.xsd"/>
-            <xs:include schemaLocation="../schema/OTA_HotelAvailNotifRQ.xsd"/>
-            <xs:include schemaLocation="../schema/OTA_HotelAvailNotifRS.xsd"/>
-            <xs:include schemaLocation="../schema/OTA_HotelRateAmountNotifRQ.xsd"/>
-            <xs:include schemaLocation="../schema/OTA_HotelRateAmountNotifRS.xsd"/>
             <xs:include schemaLocation="../schema/OTA_HotelResNotifRQ.xsd"/>
             <xs:include schemaLocation="../schema/OTA_HotelResNotifRS.xsd"/>
             <xs:include schemaLocation="../schema/OTA_PingRQ.xsd"/>
             <xs:include schemaLocation="../schema/OTA_PingRS.xsd"/>
-            <xs:include schemaLocation="../schema/OTA_HotelAvailGetRQ.xsd"/>
-            <xs:include schemaLocation="../schema/OTA_HotelAvailGetRS.xsd"/>
-            <xs:include schemaLocation="../schema/OTA_HotelRatePlanRQ.xsd"/>
-            <xs:include schemaLocation="../schema/OTA_HotelRatePlanRS.xsd"/>
         </xs:schema>
 
         <xs:schema targetNamespace="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
@@ -40,33 +30,6 @@
         </xs:schema>
 
     </wsdl:types>
-
-    <wsdl:message name="OTA_HotelAvailRQMessage">
-        <wsdl:part element="wsse:Security" name="Security"/>
-        <wsdl:part element="ota:OTA_HotelAvailRQ" name="OTA_HotelAvailRQ"/>
-    </wsdl:message>
-
-    <wsdl:message name="OTA_HotelAvailRSMessage">
-        <wsdl:part element="ota:OTA_HotelAvailRS" name="OTA_HotelAvailRS"/>
-    </wsdl:message>
-
-    <wsdl:message name="OTA_HotelAvailNotifRQMessage">
-        <wsdl:part element="wsse:Security" name="Security"/>
-        <wsdl:part element="ota:OTA_HotelAvailNotifRQ" name="OTA_HotelAvailNotifRQ"/>
-    </wsdl:message>
-
-    <wsdl:message name="OTA_HotelAvailNotifRSMessage">
-        <wsdl:part element="ota:OTA_HotelAvailNotifRS" name="OTA_HotelAvailNotifRS"/>
-    </wsdl:message>
-
-    <wsdl:message name="OTA_HotelRateAmountNotifRQMessage">
-        <wsdl:part element="wsse:Security" name="Security"/>
-        <wsdl:part element="ota:OTA_HotelRateAmountNotifRQ" name="OTA_HotelRateAmountNotifRQ"/>
-    </wsdl:message>
-
-    <wsdl:message name="OTA_HotelRateAmountNotifRSMessage">
-        <wsdl:part element="ota:OTA_HotelRateAmountNotifRS" name="OTA_HotelRateAmountNotifRS"/>
-    </wsdl:message>
 
     <wsdl:message name="OTA_HotelResNotifRQMessage">
         <wsdl:part element="wsse:Security" name="Security"/>
@@ -86,40 +49,7 @@
         <wsdl:part element="ota:OTA_PingRS" name="OTA_PingRS"/>
     </wsdl:message>
 
-    <wsdl:message name="OTA_HotelAvailGetRQMessage">
-        <wsdl:part element="wsse:Security" name="Security"/>
-        <wsdl:part element="ota:OTA_HotelAvailGetRQ" name="OTA_HotelAvailGetRQ"/>
-    </wsdl:message>
-
-    <wsdl:message name="OTA_HotelAvailGetRSMessage">
-        <wsdl:part element="ota:OTA_HotelAvailGetRS" name="OTA_HotelAvailGetRS"/>
-    </wsdl:message>
-
-    <wsdl:message name="OTA_HotelRatePlanRQMessage">
-        <wsdl:part element="wsse:Security" name="Security"/>
-        <wsdl:part element="ota:OTA_HotelRatePlanRQ" name="OTA_HotelRatePlanRQ"/>
-    </wsdl:message>
-
-    <wsdl:message name="OTA_HotelRatePlanRSMessage">
-        <wsdl:part element="ota:OTA_HotelRatePlanRS" name="OTA_HotelRatePlanRS"/>
-    </wsdl:message>
-
     <wsdl:portType name="ChannelLinkServicePort">
-
-        <wsdl:operation name="HotelAvailRQ">
-            <wsdl:input message="tns:OTA_HotelAvailRQMessage"/>
-            <wsdl:output message="tns:OTA_HotelAvailRSMessage"/>
-        </wsdl:operation>
-
-        <wsdl:operation name="HotelAvailNotifRQ">
-            <wsdl:input message="tns:OTA_HotelAvailNotifRQMessage"/>
-            <wsdl:output message="tns:OTA_HotelAvailNotifRSMessage"/>
-        </wsdl:operation>
-
-        <wsdl:operation name="HotelRateAmountNotifRQ">
-            <wsdl:input message="tns:OTA_HotelRateAmountNotifRQMessage"/>
-            <wsdl:output message="tns:OTA_HotelRateAmountNotifRSMessage"/>
-        </wsdl:operation>
 
         <wsdl:operation name="HotelResNotifRQ">
             <wsdl:input message="tns:OTA_HotelResNotifRQMessage"/>
@@ -131,57 +61,14 @@
             <wsdl:output message="tns:OTA_PingRSMessage"/>
         </wsdl:operation>
 
-        <wsdl:operation name="HotelAvailGetRQ">
-            <wsdl:input message="tns:OTA_HotelAvailGetRQMessage"/>
-            <wsdl:output message="tns:OTA_HotelAvailGetRSMessage"/>
-        </wsdl:operation>
-
-        <wsdl:operation name="HotelRatePlanRQ">
-            <wsdl:input message="tns:OTA_HotelRatePlanRQMessage"/>
-            <wsdl:output message="tns:OTA_HotelRatePlanRSMessage"/>
-        </wsdl:operation>
-
     </wsdl:portType>
 
     <wsdl:binding name="ChannelLinkServiceBinding" type="tns:ChannelLinkServicePort">
 
         <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
 
-        <wsdl:operation name="HotelAvailRQ">
-            <soap:operation soapAction="http://channellink.example.com/soap/v1/HotelAvailRQ"/>
-            <wsdl:input>
-                <soap:header message="tns:OTA_HotelAvailRQMessage" part="Security" use="literal"/>
-                <soap:body parts="OTA_HotelAvailRQ" use="literal"/>
-            </wsdl:input>
-            <wsdl:output>
-                <soap:body parts="OTA_HotelAvailRS" use="literal"/>
-            </wsdl:output>
-        </wsdl:operation>
-
-        <wsdl:operation name="HotelAvailNotifRQ">
-            <soap:operation soapAction="http://channellink.example.com/soap/v1/HotelAvailNotifRQ"/>
-            <wsdl:input>
-                <soap:header message="tns:OTA_HotelAvailNotifRQMessage" part="Security" use="literal"/>
-                <soap:body parts="OTA_HotelAvailNotifRQ" use="literal"/>
-            </wsdl:input>
-            <wsdl:output>
-                <soap:body parts="OTA_HotelAvailNotifRS" use="literal"/>
-            </wsdl:output>
-        </wsdl:operation>
-
-        <wsdl:operation name="HotelRateAmountNotifRQ">
-            <soap:operation soapAction="http://channellink.example.com/soap/v1/HotelRateAmountNotifRQ"/>
-            <wsdl:input>
-                <soap:header message="tns:OTA_HotelRateAmountNotifRQMessage" part="Security" use="literal"/>
-                <soap:body parts="OTA_HotelRateAmountNotifRQ" use="literal"/>
-            </wsdl:input>
-            <wsdl:output>
-                <soap:body parts="OTA_HotelRateAmountNotifRS" use="literal"/>
-            </wsdl:output>
-        </wsdl:operation>
-
         <wsdl:operation name="HotelResNotifRQ">
-            <soap:operation soapAction="http://channellink.example.com/soap/v1/HotelResNotifRQ"/>
+            <soap:operation soapAction="http://channellink.allotz.com/soap/v1/HotelResNotifRQ"/>
             <wsdl:input>
                 <soap:header message="tns:OTA_HotelResNotifRQMessage" part="Security" use="literal"/>
                 <soap:body parts="OTA_HotelResNotifRQ" use="literal"/>
@@ -192,7 +79,7 @@
         </wsdl:operation>
 
         <wsdl:operation name="PingRQ">
-            <soap:operation soapAction="http://channellink.example.com/soap/v1/PingRQ"/>
+            <soap:operation soapAction="http://channellink.allotz.com/soap/v1/PingRQ"/>
             <wsdl:input>
                 <soap:header message="tns:OTA_PingRQMessage" part="Security" use="literal"/>
                 <soap:body parts="OTA_PingRQ" use="literal"/>
@@ -202,33 +89,11 @@
             </wsdl:output>
         </wsdl:operation>
 
-        <wsdl:operation name="HotelAvailGetRQ">
-            <soap:operation soapAction="http://channellink.example.com/soap/v1/HotelAvailGetRQ"/>
-            <wsdl:input>
-                <soap:header message="tns:OTA_HotelAvailGetRQMessage" part="Security" use="literal"/>
-                <soap:body parts="OTA_HotelAvailGetRQ" use="literal"/>
-            </wsdl:input>
-            <wsdl:output>
-                <soap:body parts="OTA_HotelAvailGetRS" use="literal"/>
-            </wsdl:output>
-        </wsdl:operation>
-
-        <wsdl:operation name="HotelRatePlanRQ">
-            <soap:operation soapAction="http://channellink.example.com/soap/v1/HotelRatePlanRQ"/>
-            <wsdl:input>
-                <soap:header message="tns:OTA_HotelRatePlanRQMessage" part="Security" use="literal"/>
-                <soap:body parts="OTA_HotelRatePlanRQ" use="literal"/>
-            </wsdl:input>
-            <wsdl:output>
-                <soap:body parts="OTA_HotelRatePlanRS" use="literal"/>
-            </wsdl:output>
-        </wsdl:operation>
-
     </wsdl:binding>
 
     <wsdl:service name="ChannelLinkService">
         <wsdl:port binding="tns:ChannelLinkServiceBinding" name="ChannelLinkServicePort">
-            <soap:address location="https://channellink.example.com/soap/v1"/>
+            <soap:address location="https://channellink.allotz.com/soap/v1"/>
         </wsdl:port>
     </wsdl:service>
 
