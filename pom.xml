@@ -8,7 +8,7 @@
     <groupId>com.traveliko</groupId>
     <artifactId>allotz-cxf-client</artifactId>
     <packaging>jar</packaging>
-    <version>3.4.9-SNAPSHOT</version>
+    <version>3.4.8-SNAPSHOT</version>
     <name>Allotz CXF Client (JAR)</name>
     <inceptionYear>2013</inceptionYear>
     <organization>
@@ -38,6 +38,7 @@
 
     <properties>
         <apache.cxf.version>3.4.4</apache.cxf.version>
+        <aws.maven.version>5.0.0.RELEASE</aws.maven.version>
         <buildnumber.maven.plugin.version>1.4</buildnumber.maven.plugin.version>
         <gitflow.version>1.16.0</gitflow.version>
         <java.version>1.8</java.version>
@@ -143,19 +144,26 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
                 <version>${maven.deploy.plugin.version}</version>
+<!--                <dependencies>-->
+<!--                    <dependency>-->
+<!--                        <groupId>net.java.dev.jets3t</groupId>-->
+<!--                        <artifactId>jets3t</artifactId>-->
+<!--                        <version>${jets3t.version}</version>-->
+<!--                    </dependency>-->
+<!--                </dependencies>-->
             </plugin>
         </plugins>
 
+        <extensions>
+            <extension>
+                <groupId>org.springframework.build</groupId>
+                <artifactId>aws-maven</artifactId>
+                <version>${aws.maven.version}</version>
+            </extension>
+        </extensions>
     </build>
 
     <dependencies>
-        <!-- For uploading to S3 -->
-        <dependency>
-            <groupId>net.java.dev.jets3t</groupId>
-            <artifactId>jets3t</artifactId>
-            <version>${jets3t.version}</version>
-        </dependency>
-
         <!-- Apache CXF -->
         <dependency>
             <groupId>org.apache.cxf</groupId>
