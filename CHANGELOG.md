@@ -2,6 +2,52 @@
 
 Changelog of allotz-channel-manager-ws-soap-client-java.
 
+## 5.0.1 (2023-04-05)
+
+### Other changes
+
+**Merge branch 'release/5.0.1'**
+
+
+[e1449](https://github.com/wink-travel/allotz-channel-manager-ws-soap-client-java/commit/e14494bd3d3c12f) Bjorn Harvold *2023-04-05 06:43:57*
+
+**Update versions for release**
+
+
+[a510b](https://github.com/wink-travel/allotz-channel-manager-ws-soap-client-java/commit/a510bc800c2d58b) Bjorn Harvold *2023-04-05 06:43:57*
+
+**:rocket: build: added pom parent**
+
+
+[9d4e9](https://github.com/wink-travel/allotz-channel-manager-ws-soap-client-java/commit/9d4e96c3e364c72) Bjorn Harvold *2023-04-05 06:43:29*
+
+**:twisted_rightwards_arrows: doc: merged CHANGELOG.md from master into develop branch**
+
+
+[37cd4](https://github.com/wink-travel/allotz-channel-manager-ws-soap-client-java/commit/37cd47ead84c156) Bjorn Harvold *2023-04-03 09:20:45*
+
+**Update for next development version**
+
+
+[95572](https://github.com/wink-travel/allotz-channel-manager-ws-soap-client-java/commit/95572ae6f0d7a38) Bjorn Harvold *2023-04-03 09:20:20*
+
+**Merge tag '5.0.0' into develop**
+
+* Tag release 
+
+[fbd33](https://github.com/wink-travel/allotz-channel-manager-ws-soap-client-java/commit/fbd332c4132c8c5) Bjorn Harvold *2023-04-03 09:20:18*
+
+
+## v5.0.0 (2023-04-03)
+
+### Other changes
+
+**:memo: doc: Updated CHANGELOG.md...**
+
+
+[27b7c](https://github.com/wink-travel/allotz-channel-manager-ws-soap-client-java/commit/27b7ca3bb3a922e) Bjorn Harvold *2023-04-03 09:20:33*
+
+
 ## 5.0.0 (2023-04-03)
 
 ### Other changes
